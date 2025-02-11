@@ -57,16 +57,15 @@ https://templatemo.com/tm-571-hexashop
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#men">Man Und</a></li>
-                            <li class="scroll-to-section"><a href="#women">Man City</a></li>
-                            <li class="scroll-to-section"><a href="#kids">Liverpool</a></li>
+                            <li class="scroll-to-section"><a href="{{ route("main") }}">Home</a></li>
+                            <li class="scroll-to-section"><a href="{{ route("ManUnd") }}">Man Und</a></li>
+                            <li class="scroll-to-section"><a href="{{ route("ManCity") }}">Man City</a></li>
+                            <li class="scroll-to-section"><a href="{{ route("Liverpool") }}">Liverpool</a></li>
                             <li class="submenu">
                                 <a href="javascript:;">Pages</a>
                                 <ul>
                                     <li><a href="about.html">About Us</a></li>
-                                    <li><a href="{{ route("products.index") }}">Products</a></li>
-                                    <li><a href="">Single Product</a></li>
+                                    <li><a href="{{ route("about") }}">Products</a></li>
                                     <li><a href="{{ route("contact")}}">Contact Us</a></li>
                                 </ul>
                             </li>

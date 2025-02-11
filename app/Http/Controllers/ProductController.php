@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Routing\Controller as BaseController;
 use App\Http\Requests\StorePostRequest;
 use App\Models\Product;
-use App\Models\Team;
+use App\Models\Team;    
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 class ProductController extends BaseController

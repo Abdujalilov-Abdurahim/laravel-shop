@@ -131,7 +131,7 @@
                     <div class="men-item-carousel">
                         <div class="owl-men-item owl-carousel">
 
-                            @foreach ($products as $product)
+                            @foreach ($ManUnds as $product)
                             <div class="item">
                                 <div class="thumb">
                                     <div class="hover-content">
