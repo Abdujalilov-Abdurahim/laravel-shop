@@ -20,6 +20,6 @@ class AdminMiddleware
         return $next($request);
         }
 
-        return redirect('main')->with('error', 'Sizda bu amalni bajarish huquqi yo‘q!');
+        return redirect('/')->with('error', 'Sizda bu amalni bajarish huquqi yo‘q!');
     }
 }

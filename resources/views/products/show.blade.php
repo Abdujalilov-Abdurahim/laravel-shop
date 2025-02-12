@@ -47,6 +47,7 @@
                 </ul>
 
                 @auth
+                    
                 
                 <div>
                     <a href="{{ route("products.edit", $product->id) }}" class="mt-5 btn btn-primary" type="submit">O'zgartirish</a>
@@ -54,9 +55,10 @@
                         onsubmit="return confirm('Rostdan ham mahsulotni o\'chirmoqchimisiz?');">
                         @csrf
                         @method("DELETE")
-                    <button class="mt-5 btn btn-danger" type="submit">O'chirish</button>
+                        <button class="mt-5 btn btn-danger" type="submit">O'chirish</button>
                     </form>
                 </div>
+                
                 @endauth
                 
                 <div class="quote">

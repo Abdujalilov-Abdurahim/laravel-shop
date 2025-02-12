@@ -5,17 +5,18 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Team;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 
 class ShopController extends Controller
 {
     
-
     public function index()
     {
+
         $ManUnd = Team::where("name", "Manchester United")->first()->products()->get();
-        $ManCity = Team::where("name", "Manchester City")->first()->products();
-        $Liverpool = Team::where("name", "Liverpool")->first()->products();
+        $ManCity = Team::where("name", "Manchester City")->first()->products()->get();
+        $Liverpool = Team::where("name", "Liverpool")->first()->products()->get();
 
         return view("main")->with([
             "ManUnds"=> $ManUnd,

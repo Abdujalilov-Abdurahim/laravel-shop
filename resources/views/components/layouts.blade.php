@@ -57,16 +57,16 @@ https://templatemo.com/tm-571-hexashop
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="{{ route("main") }}">Home</a></li>
+                            <li class="scroll-to-section"><a href="{{ route("main") }}">Bosh sahifa</a></li>
                             <li class="scroll-to-section"><a href="{{ route("ManUnd") }}">Man Und</a></li>
                             <li class="scroll-to-section"><a href="{{ route("ManCity") }}">Man City</a></li>
                             <li class="scroll-to-section"><a href="{{ route("Liverpool") }}">Liverpool</a></li>
                             <li class="submenu">
                                 <a href="javascript:;">Pages</a>
                                 <ul>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="{{ route("about") }}">Products</a></li>
-                                    <li><a href="{{ route("contact")}}">Contact Us</a></li>
+                                    <li><a href="about.html">Biz haqimizda</a></li>
+                                    <li><a href="{{ route("about") }}">Mahsulotlar</a></li>
+                                    <li><a href="{{ route("contact")}}">Kontakt</a></li>
                                 </ul>
                             </li>
                             {{-- <li class="submenu">
@@ -78,12 +78,20 @@ https://templatemo.com/tm-571-hexashop
                                     <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
                                 </ul> --}}
                                 
-                                @auth                                    
+                                @auth   
+                                @can ('manage-products')
+                                    
+                                
                                 <li class="scroll-to-section"><a href=" {{ route("products.create")}} " class=" btn btn-primary"> Mahsulot qo'shish </a></li>
+                                <a href="" class="btn btn-dark"> Dashboard </a>
+                                @endcan
+                               
+                                <a href="" class="btn btn-dark mr-2"> Profil </a>
                                 <form action="{{ route("logout")}}" method="POST">
                                     @csrf
+                                    
                                     <button type="submit" class="btn btn-dark"> Chiqish </button>
-                                </form>
+                                </form>                               
                                 @else
                                 <li class="scroll-to-section"><a href=" {{ route("login")}} " class=" btn btn-primary"> Kirish </a></li>
 
@@ -156,7 +164,7 @@ https://templatemo.com/tm-571-hexashop
                         <ul>
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="www.linkedin.com/in/abdurahim-abdujalilov-79a6ba31b"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://linkedin.com/in/abdurahim-abdujalilov-79a6ba31b"><i class="fa fa-linkedin"></i></a></li>
                             <li><a href="#"><i class="fa fa-behance"></i></a></li>
                         </ul>
                     </div>

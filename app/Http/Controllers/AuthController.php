@@ -26,7 +26,7 @@ class AuthController extends Controller
         $user = User::create($valitade);
         auth()->login($user);
 
-        return redirect()->route("main")->with("success","");
+        return redirect()->route("/")->with("success","");
     }
 
     public function login()
@@ -44,7 +44,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended("main");
+            return redirect()->intended("/");
         }
 
         return back()->withErrors([
@@ -58,6 +58,6 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect()->intended("main");
+        return redirect()->intended("/");
     }
 }

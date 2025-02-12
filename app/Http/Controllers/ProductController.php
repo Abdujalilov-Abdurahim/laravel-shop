@@ -7,12 +7,14 @@ use App\Http\Requests\StorePostRequest;
 use App\Models\Product;
 use App\Models\Team;    
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Storage;
 class ProductController extends BaseController
 {
     public function __construct()
     {
         $this->middleware('auth', ['except' => ['index', 'show']]);
+        $this->middleware('admin')->only(['create', 'store', 'edit', 'update', 'destroy']);
     }
 
 
@@ -54,6 +56,7 @@ class ProductController extends BaseController
 
     public function edit($id)
     {
+
         $product = Product::find($id);
         $teams = Team::all();
         return view("products.edit")->with(["product" => $product, "teams" => $teams]);
