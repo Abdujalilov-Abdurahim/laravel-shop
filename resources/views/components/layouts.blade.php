@@ -79,14 +79,16 @@ https://templatemo.com/tm-571-hexashop
                                 </ul> --}}
                                 
                                 @auth   
-                                @can ('manage-products')
+                                @can('admin')
+                                    
+                                
                                     
                                 
                                 <li class="scroll-to-section"><a href=" {{ route("products.create")}} " class=" btn btn-primary"> Mahsulot qo'shish </a></li>
                                 <a href="" class="btn btn-dark"> Dashboard </a>
                                 @endcan
                                
-                                <a href="" class="btn btn-dark mr-2"> Profil </a>
+                                <a href="{{ route("user.profile") }}" class="btn btn-dark mr-2"> Profil </a>
                                 <form action="{{ route("logout")}}" method="POST">
                                     @csrf
                                     
@@ -158,21 +160,20 @@ https://templatemo.com/tm-571-hexashop
                 </div>
                 <div class="col-lg-12">
                     <div class="under-footer">
-                        <p>Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved. 
+                        <p>Copyright © 2025 HexaShop Co., Ltd. All Rights Reserved. 
                         
                         <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a></p>
                         <ul>
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="https://linkedin.com/in/abdurahim-abdujalilov-79a6ba31b"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            <li><a href="https://github.com/Abdujalilov-Abdurahim"><i class="fa fa-github"></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    
 
     <!-- jQuery -->
     <script src="{{ asset("js/jquery-2.1.0.min.js")}}" ></script>

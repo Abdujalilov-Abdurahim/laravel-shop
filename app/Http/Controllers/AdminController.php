@@ -28,7 +28,7 @@ class AdminController extends Controller
             $request->session()->regenerate();
             return redirect()->route('main');
         }
-
+        
         return back()->withErrors(["email" => "Email yoki parol noto‘g‘ri!"]);
     }
     
