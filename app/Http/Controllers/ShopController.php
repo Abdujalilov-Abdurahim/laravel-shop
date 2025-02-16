@@ -8,10 +8,15 @@ use Auth;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Routing\Controller;
 
 
 class ShopController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware("admin")->only(["create", "store", "edit", "update", "destroy"]);
+    }
     
     public function index()
     {

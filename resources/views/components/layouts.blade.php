@@ -51,8 +51,8 @@ https://templatemo.com/tm-571-hexashop
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
-                            <img src="assets/images/logo.png">
+                        <a href="{{ route("main") }}" class="logo">
+                            <img src="img/logo.png">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -64,8 +64,8 @@ https://templatemo.com/tm-571-hexashop
                             <li class="submenu">
                                 <a href="javascript:;">Pages</a>
                                 <ul>
-                                    <li><a href="about.html">Biz haqimizda</a></li>
-                                    <li><a href="{{ route("about") }}">Mahsulotlar</a></li>
+                                    <li><a href="{{ route("about") }}">Biz haqimizda</a></li>
+                                    <li><a href="{{ route("products.index") }}">Mahsulotlar</a></li>
                                     <li><a href="{{ route("contact")}}">Kontakt</a></li>
                                 </ul>
                             </li>
@@ -123,7 +123,7 @@ https://templatemo.com/tm-571-hexashop
                 <div class="col-lg-3">
                     <div class="first-item">
                         <div class="logo">
-                            <img src="assets/images/white-logo.png" alt="hexashop ecommerce templatemo">
+                            <img src="img/white-logo.png" alt="hexashop ecommerce templatemo">
                         </div>
                         <ul>
                             <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
