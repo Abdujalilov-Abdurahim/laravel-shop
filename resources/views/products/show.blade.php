@@ -52,12 +52,12 @@
                     
                 
                 <div>
-                    <a href="{{ route("products.edit", $product->id) }}" class="mt-5 btn btn-primary" type="submit">O'zgartirish</a>
+                    <a href="{{ route("products.edit", $product->id) }}" class="mt-5 btn btn-primary" type="submit"><i class="fa fa-pencil-square" aria-hidden="true">O'zgartirish</i></a>
                     <form action="{{ route("products.destroy", $product->id) }}" method="POST"
                         onsubmit="return confirm('Rostdan ham mahsulotni o\'chirmoqchimisiz?');">
                         @csrf
                         @method("DELETE")
-                        <button class="mt-5 btn btn-danger" type="submit">O'chirish</button>
+                        <button class="mt-5 btn btn-danger" type="submit"><i class="fa fa-trash" aria-hidden="true">O'chirish</i></button>
                     </form>
                 </div>
                 @endcan

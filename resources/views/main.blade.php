@@ -37,7 +37,7 @@
                                                 <h4>Manchester United</h4>
                                                 <p>Manchester Unitedning uy va mehmon formalari</p>
                                                 <div class="main-border-button">
-                                                    <a href="#">Ko'proq ko'rish</a>
+                                                    <a href="{{ route("ManUnd") }}">Ko'proq ko'rish</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -57,7 +57,7 @@
                                                 <h4>Manchester City</h4>
                                                 <p>Manchester Cityning uy va mehmon formalari</p>
                                                 <div class="main-border-button">
-                                                    <a href="#">Ko'proq ko'rish</a>
+                                                    <a href="{{ route("ManCity") }}">Ko'proq ko'rish</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -77,7 +77,7 @@
                                                 <h4>Liverpool</h4>
                                                 <p>Liverpoolning uy va mehmon formalari</p>
                                                 <div class="main-border-button">
-                                                    <a href="#">Ko'proq ko'rish</a>
+                                                    <a href="{{ route("Liverpool") }}">Ko'proq ko'rish</a>
                                                 </div>
                                             </div>
                                         </div>

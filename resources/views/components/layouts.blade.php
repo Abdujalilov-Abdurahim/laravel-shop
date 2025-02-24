@@ -84,18 +84,21 @@ https://templatemo.com/tm-571-hexashop
                                 
                                     
                                 
-                                <li class="scroll-to-section"><a href=" {{ route("products.create")}} " class=" btn btn-primary"> Mahsulot qo'shish </a></li>
+                                <li class="scroll-to-section"><a href=" {{ route("products.create")}} " class=" btn btn-primary"><i class="fa fa-plus-square" aria-hidden="true">Mahsulot qo'shish</i></a></li>
                                 <a href="" class="btn btn-dark"> Dashboard </a>
                                 @endcan
                                
-                                <a href="{{ route("user.profile") }}" class="btn btn-dark mr-2"> Profil </a>
+                                <a href="{{ route("user.profile") }}" class="btn btn-dark mr-2"> <i class="fa fa-home" aria-hidden="true">Profil</i> </a>
                                 <form action="{{ route("logout")}}" method="POST">
                                     @csrf
                                     
-                                    <button type="submit" class="btn btn-dark"> Chiqish </button>
+                                    <button type="submit" class="btn btn-dark"><i class="fa fa-sign-out" aria-hidden="true">Chiqish</i>  </button>
                                 </form>                               
                                 @else
-                                <li class="scroll-to-section"><a href=" {{ route("login")}} " class=" btn btn-primary"> Kirish </a></li>
+                                
+                                <li class="scroll-to-section"><a href=" {{ route("login")}} " class=" btn btn-primary"> 
+                                    <i class="fa fa-user" aria-hidden="true"> Kirish </i> </a>
+                                </li>
 
                                 @endauth
                   
@@ -135,9 +138,9 @@ https://templatemo.com/tm-571-hexashop
                 <div class="col-lg-3">
                     <h4>Shopping &amp; Categories</h4>
                     <ul>
-                        <li><a href="#">Men’s Shopping</a></li>
-                        <li><a href="#">Women’s Shopping</a></li>
-                        <li><a href="#">Kid's Shopping</a></li>
+                        <li><a href="{{ route("ManUnd") }}">Man Und</a></li>
+                        <li><a href="{{ route("ManCity") }}">Man City</a></li>
+                        <li><a href="{{ route("Liverpool") }}">Liverpool</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
